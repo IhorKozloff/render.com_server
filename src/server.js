@@ -1,7 +1,7 @@
 const app = require('./api')
 
-const { PORT = 3005 } = process.env;
+const { PORT = 3005, MESSAGE } = process.env;
 
 app.listen(PORT, () => {
-    console.log(`Example app listening on port ${PORT}!`);
+    console.log(`${MESSAGE} ${PORT}!`);
 });
