@@ -6,5 +6,6 @@ const { validateBody, isUserAuthorized } = require("../middlewares");
 //const { joiAddTransactionSchema } = require("../models/transaction")
 
 coursesRouter.get('/all', ctrlWrapper(ctrl.getAllCourses));
+coursesRouter.get('/:courseId', ctrlWrapper(ctrl.getCourseById));
 
 module.exports = coursesRouter;

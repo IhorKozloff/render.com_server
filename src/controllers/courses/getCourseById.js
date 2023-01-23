@@ -2,8 +2,8 @@ const { Course }  = require('../../models/courses')
 
 const getCourseById = async (req, res, next) => {
 
-    const { id: _id } = req.params;
-    const result = await Course.findOne(_id);
+    const { courseId } = req.params;
+    const result = await Course.findById(courseId);
 
     res.json({
         status: "success",
