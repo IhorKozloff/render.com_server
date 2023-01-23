@@ -1,0 +1,562 @@
+in this video we're going to talk about
+
+decision statements there's actually
+
+three that we're going to consider the
+
+if the switch and a ternary operator and
+
+so whenever we need to add logic to our
+
+application in other words perform
+
+different blocks of code based on some
+
+condition that we evaluate we'll want to
+
+use one of these decision statements and
+
+so let's go ahead and start by creating
+
+a new file called decisions Jas and here
+
+what we'll do is start with the if
+
+statement so the basic structure looks
+
+like this if and then role evaluates
+
+something here some expression so let me
+
+just kind of start off with this some
+
+expression that expression should equal
+
+true or false and there's lots of ways
+
+to evaluate this we'll come back to in
+
+just a moment but we'll consider those
+
+in between the opening and closing
+
+parentheses if that is true whatever
+
+that expression is then we'll execute
+
+all the code inside so let's begin
+
+simple our count equals 3 we'll just
+
+hard code a value and then say so if
+
+count and then we'll use the equality
+
+operator so this is going to evaluate
+
+for equality if count indeed is equal to
+
+4 then we will that will that expression
+
+will return true if it's true then we'll
+
+perform whatever code we write here so
+
+consoles out log and count is 4 so the
+
+first time we run this we're not going
+
+to get really anything alright so the
+
+first time we run this we're going to
+
+not give anything it'll just exit what
+
+we can do is change this to count equals
+
+3 like so and now when we run it will
+
+see the message count is 3 all right
+
+very uninspiring let's set this back to
+
+4 and here we can consider the
+
+alternative that the count is not equal
+
+to 4
+
+and we could kind of give a counter
+
+message count is not for this much we
+
+know to be true all right all right so
+
+count is not for we basically skipped
+
+over this block of code because this
+
+returned false therefore we executed the
+
+else statement this second block of code
+
+and skipped over the first one okay
+
+so there's actually several different
+
+variations of this we can use because
+
+there are some different conditions here
+
+maybe I don't want to jump right to that
+
+else statement maybe I want to keep
+
+evaluating I can use an else--if and so
+
+here I might say else if the count is
+
+greater than four then I could maybe do
+
+a message like console dot log count is
+
+greater than four and I can do kind of
+
+the opposite as well else if count is
+
+less than four so console dot log count
+
+is less than four has that changed
+
+modalities there and then at that point
+
+this will never happen ever because one
+
+of these three conditions would occur
+
+we'd never get to this final else
+
+statement right it would just would
+
+never happen so let's go in save our
+
+work here and see this run count is less
+
+than four because it's three okay so
+
+that's the general structure of the if
+
+statement it allows us to evaluate one
+
+or more expressions if it returns if
+
+that expression returns a true then we
+
+execute the code in the code block
+
+associated with that expression we can
+
+create optional else or else if
+
+statements to continue to evaluate other
+
+expressions usually you want to make
+
+related ones but you don't necessarily
+
+have to although that may not make a
+
+whole lot of sense depending on your
+
+business rules and then we can finally
+
+use
+
+catch-all in case none of the previous
+
+else if statements are are correct and
+
+kind of capture that so let's go ahead
+
+and comment that out that's our first
+
+structure we'll use the if statement a
+
+lot the next type of statement is a
+
+switch it's a little bit more tricky to
+
+use let's start off with just typing out
+
+the switch keyword and what we want to
+
+evaluate and so what we'll do is
+
+actually evaluate whatever's in this
+
+expression against a number of cases so
+
+I might for example let hero equals
+
+Superman and then depending on the hero
+
+I might want to print out the the
+
+superpowers that that particular hero
+
+has so based on the hero if that hero so
+
+if the case is Superman I would say well
+
+that hero has console.log superstring
+
+[Music]
+
+may also have x-ray vision alright let's
+
+add another case here and say case
+
+Batman
+
+and notice that kind of the the format
+
+of this to use the case keyword inside
+
+of this block that belongs to the switch
+
+the case keyword the value we want to
+
+compare our our case against and then a
+
+semicolon and everything underneath that
+
+will become part of the body of that of
+
+that case that gets executed so in this
+
+case we'll say where are Batman
+
+superpowers
+
+he has intelligence and he has fighting
+
+skills all right and then we can also
+
+then say well the default for that hero
+
+is that they're a member of the JLA now
+
+watch how this works it works a little
+
+bit different than the if and else if so
+
+let's go ahead and say what we have and
+
+then rerun this all right so in this
+
+case it was Superman and notice that we
+
+matched the case Superman because it
+
+prints out super-strength and x-ray
+
+vision but then everything else inside
+
+of all additional cases including the
+
+default case will be true as well so he
+
+also is intelligent he has fighting
+
+skills and he's a member of the JLA now
+
+if we were to change this to let's say
+
+Cat Man and we were to run the
+
+application you'll notice that it skips
+
+over all of the console log statements
+
+that describe Superman's superpowers and
+
+they they come in however here at Batman
+
+so console.log intelligence fighting
+
+skills and he's also a member of JLA now
+
+we could try somebody like a Green Arrow
+
+not particularly one of my favorite
+
+heroes and he's just a member of the JLA
+
+alright now if we don't want that that
+
+flow through style what we can do is
+
+actually use a break statement in here
+
+so let's go back through this now and
+
+see what happens whenever we break out
+
+of a given case so back to Superman and
+
+now when we run it we only see that he
+
+has super strength and x-ray vision
+
+Batman
+
+as intelligent fighting skills and then
+
+green arrow it's just a member of the
+
+JLA okay all right one other quick tip
+
+here is that whenever you're evaluating
+
+strings there's a possibility like for
+
+example Batman what if he had capital B
+
+in Batman alright and then we run the
+
+application and you see he's a member of
+
+the JLA why didn't it catch the case
+
+Batman because capital B Batman is not
+
+the same as lowercase B Batman in that
+
+string now what we can do to circumvent
+
+that whenever we're working with strings
+
+and we want to do some comparison with
+
+them we can use the two lowercase method
+
+of our strains so strings have a
+
+built-in method called to lowercase and
+
+that will take whatever that input is
+
+and it will make sure that all the
+
+letters are lowercase so that we're
+
+really comparing apples to apples
+
+instead of apples to oranges so now when
+
+we rerun the application we get what we
+
+would expect with Batman okay all right
+
+so let me comment this out we've looked
+
+at the if statement we've looked at the
+
+switch and then the third one we're
+
+going to look at is the ternary operator
+
+and this is useful whenever I want to I
+
+want to just do a quick inline
+
+evaluation of some expression and then
+
+return back a value a string number
+
+boolean whatever probably just a string
+
+or a number back depending on whether
+
+that expression evaluates to true or
+
+false a very small short concise inline
+
+statement so I'm gonna create two
+
+variables I'm gonna do something a
+
+little bit different though the first
+
+variable I'll create like you would
+
+normally expect but instead of ending
+
+that line and moving to the next one I'm
+
+going to do another variable creation
+
+variable Declaration and assignment
+
+right here in the same line so I'm gonna
+
+create another variable called B and
+
+initialize its value to the string one
+
+alright so just a slightly different
+
+technique you might see that online
+
+moving on so
+
+we're gonna create another variable
+
+called results and we'll set that equal
+
+to some evaluation of an expression does
+
+a equal B so two equal signs that are
+
+next to each other is the Equality
+
+operator this is a check for equality to
+
+say does a equal B and if that is true
+
+then what we'll do is return the word
+
+equal as a string but if it's not true
+
+notice the colon that separates the true
+
+from the false will return the word in
+
+equal so the ternary operator has kind
+
+of got several parts here there's an
+
+expression there's a question mark that
+
+that has true or false ramifications and
+
+we'll just do a console dot log result
+
+so so now let's go ahead and run that
+
+and these are equal great we could also
+
+do this inline so let me just take this
+
+part right here and do that instead you
+
+can see how we can basically perform
+
+that same check without having to create
+
+a new variable to hold the result all
+
+right so it's a nice inline way of
+
+running a quick check and then returning
+
+back a string one string or another
+
+string now let me just go back for a
+
+second here or actually let's do this
+
+and then we'll do console.log though
+
+okay we comment this one out I want to
+
+keep it around for you in case you want
+
+to reference that in the future we used
+
+two equal signs but there's another
+
+another type of equality that we can
+
+check for and that strict equality and
+
+this will check to make sure that these
+
+two values are equal but then in
+
+addition to that it will not coerce for
+
+exam
+
+well the number one and the string one
+
+it'll say are these absolutely equal and
+
+even with the same data types all right
+
+and so in this particular case we should
+
+expect a different result these are in
+
+equal they are not the same all right so
+
+these are the same because I'm looking
+
+for equality but if I'm looking at
+
+strict equality and I'm not allowing
+
+JavaScript to coerce the integer into a
+
+string and then check for equality that
+
+I have to say no these are not the same
+
+because one is a number one's a string
+
+all right all right so let me comment
+
+that out and let's take do one more
+
+check here in this case I'm going to use
+
+a different operator the not equal to
+
+operator so I'll see use the word not in
+
+equal and not not equal and not in equal
+
+alright which would be the same as
+
+saying equal alright so now let's see
+
+and run that and this produces a false
+
+so this would be returned back and then
+
+displayed on-screen but then we can also
+
+do strict inequality by adding another
+
+equal sign to that operator and these
+
+are not equal again because it is true
+
+that a is not strictly equal to B
+
+because they're different data types all
+
+right hopefully that makes sense all
+
+right so let's go ahead and stop there
+
+and hopefully all this ternary operator
+
+business and and equality and strict
+
+equality makes sense and let's move on
+
+you're doing great
+
+we'll see in the next video Thanks
+

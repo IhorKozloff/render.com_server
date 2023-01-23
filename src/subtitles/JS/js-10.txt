@@ -1,0 +1,512 @@
+in the previous video we learned how to
+
+create a function Declaration and a
+
+function Declaration and a variable
+
+declaration are similar and so much that
+
+they both have an identifier or a name
+
+because we plan to call them later on in
+
+our JavaScript but what if we don't need
+
+a name what if we're in a situation
+
+where there's just a need for a function
+
+but that functional never you called for
+
+the rest of the application and we know
+
+that then we can take a different tact
+
+we don't need to add a new identifier we
+
+can just create what's called a function
+
+expression and we don't have to supply a
+
+name we just give it the body of the
+
+function and say hey or go do this when
+
+you need to run some code alright and a
+
+good explanation code that should run in
+
+the future so here let me start off by
+
+creating function expressions J is a new
+
+file and here I want to use the set
+
+timeout method that's available inside a
+
+JavaScript and if we use intellisense we
+
+can see that there's actually two input
+
+parameters to this function set timeout
+
+we're gonna first of all need to give it
+
+something called a handler which I
+
+happen to know is just a function now I
+
+could give it a function declaration but
+
+usually people just create function
+
+expressions here for the handler and
+
+then the second thing we'll need to do
+
+and I'll use the down arrow to move from
+
+the first argument to the second
+
+argument is to give it a timeout and so
+
+that's the number of milliseconds that I
+
+want it to wait before executing this
+
+code and I'll show you how that might be
+
+interesting in just a few moments here
+
+but the first thing we need to do is
+
+create a function expression to pass in
+
+so just here write in line I'm gonna
+
+create a function open close parentheses
+
+open close curly braces which denote the
+
+body of this expression I'm creating
+
+inside of here I'm gonna do something
+
+simple like console dot log I waited
+
+seconds and then here at the very end of
+
+the function declaration I'm gonna give
+
+it that second argument the number of
+
+milliseconds that I want to wait before
+
+executing that function that function
+
+expression so I'm gonna say wait two
+
+seconds and then I want you to call this
+
+inline function I'm creating and the
+
+body of it will merely just log out I
+
+waited two seconds all right so here we
+
+go let's go and do node and then
+
+function expressions one one thousand
+
+two one thousand and you can see it
+
+prints to screen I wait at two seconds
+
+all right now it's kind of hard to read
+
+it like this all in line one of the
+
+things in JavaScript that's a little bit
+
+challenging especially if you're getting
+
+started is the number of curly braces
+
+that you'll encounter and
+
+differentiating for example this outer
+
+set of parentheses and this inner set of
+
+parentheses and and Visual Studio code
+
+tries to help you like when I put my
+
+caret right next to that opening curly
+
+brace it tries to find the matching
+
+closing curly brace and you'll see as we
+
+add more curly braces for different
+
+purposes and indentation levels inside
+
+of our application Visual Studio code
+
+does a pretty good job most of the time
+
+of finding its match it's just a matter
+
+of looking for that caret that surrounds
+
+the closing one here over you can see
+
+whatever la in column number 61 here I'm
+
+looking at the bottom okay anything
+
+inside is just the body of the function
+
+and the same rules apply whoops I didn't
+
+use a semicolon at the end of that line
+
+but I should have right it shouldn't
+
+change the function in this simple case
+
+but nothing changes about how we work
+
+with this now to be honest most people
+
+do not put this much code on a single
+
+line I may want to split this up into
+
+multiple lines so I would do this in a
+
+way that feels natural to me and you can
+
+see that as I put my mouse cursor next
+
+to where I feel like the split should
+
+have been like a
+
+getting of console dot log and here at
+
+the end of our body of our function
+
+expression Visual Studio code naturally
+
+will create some indentation F I don't
+
+like that level of indentation I'm free
+
+to come in here and to change it up like
+
+I would prefer to use a tab here so I'm
+
+using the tab key on my keyboard to move
+
+things out and the shift tab to move
+
+things back that only works if my mouse
+
+cursor is here right at the beginning of
+
+that line if I were to move one
+
+character in and use the tab key well
+
+that's you know that's not what I want
+
+at all that's going to let that word up
+
+but if I use the keyboard the arrows on
+
+the keyboard to maneuver and then the
+
+shift tab to move it out I can move
+
+things in and out but that is pretty
+
+much how I would like to see that
+
+function represented right and then I
+
+use a comma to pass in a second argument
+
+in this case the number of milliseconds
+
+to my set timeout function alright so
+
+but the photo the focus of this is that
+
+function expression I never want to use
+
+that function again but I need it in
+
+this case as an argument to pass into my
+
+set timeout function so functions can
+
+take functions as input parameters okay
+
+so just keep that in mind because things
+
+are gonna get a lot crazier than that
+
+and let's move on and talk about using
+
+both the function declaration and a
+
+function expression to do something just
+
+a little bit more interesting here same
+
+basic idea here but what I want to do
+
+start off with a counter and this will
+
+count the number of times that we
+
+actually execute our our function
+
+expression I'm gonna start with a
+
+function on the outside function timeout
+
+let's call this function timeout like so
+
+and then inside I'm gonna set timeout
+
+using that built-in function the
+
+JavaScript and pass in a new function
+
+expression
+
+all right and then I'm going to here
+
+give set timeout say in two seconds I
+
+want you to basically run this function
+
+expression that I've defined right there
+
+so I'll cast on the second argument of
+
+two thousand again you have using Visual
+
+Studio code to help me find the matching
+
+set of parentheses at the beginning in
+
+the end to pass in the input parameter
+
+to the set timeout function recognizing
+
+that the function expression is the
+
+first argument to that and two thousand
+
+is the second input parameter to that
+
+set timeout function here's what I'm
+
+going to do now I'm going to append it
+
+so I'm gonna put a little space there
+
+between hi and the closing single quote
+
+mark counter but I want to after every
+
+time I reference counter I want to
+
+increment it by 1 so this will allow me
+
+to count the number of times that set
+
+timeout has run now one of the things
+
+that I want to do is after I have
+
+printed that line I'm gonna schedule the
+
+next time that this code should run so
+
+I'm gonna schedule and call timeout in a
+
+recursive manner so I'm using the name
+
+of this outermost function and saying
+
+hey now that you've run me run me again
+
+in two seconds because I'm gonna
+
+basically call set timeout again alright
+
+now I need to kick this off the first
+
+time so we'll call set timeout once here
+
+on line number 15 and that will kick
+
+things off and then
+
+I'm gonna hit ctrl + C on my keyboard to
+
+stop the execution because it'll just
+
+keep looping and looping and looping
+
+alright hopefully in your mind you
+
+understand the sequence of events here
+
+I'm gonna call this function declaration
+
+once the body of that function will
+
+create a set timeout in two seconds I
+
+want to execute this function expression
+
+which will not only show me the number
+
+of times that this function has been
+
+called because I'm keeping count of it
+
+in that counter variable but then also
+
+it's going to call the timeout function
+
+again which will schedule two seconds
+
+from now the next call to the set
+
+timeout function okay so let's see it
+
+run hopefully this all makes sense so I
+
+waited two seconds saw it run once it's
+
+twice three times and see it'll just
+
+keep going every two seconds until I hit
+
+ctrl C on my keyboard to stop its
+
+execution alright alright the last thing
+
+that I want to show you now come and all
+
+this out is that you can create a
+
+function declaration I'm sorry a
+
+function expression that says something
+
+like console.log and I'll make something
+
+a little bit more interesting later and
+
+then I can immediately invoke that
+
+function by first of all surrounding
+
+this function expression in parentheses
+
+just kind of say hey I want to group all
+
+this together and then using another set
+
+of parentheses as the function
+
+invocation operator like that do you see
+
+that format so there's this intercept
+
+that we use just to define input
+
+parameters we don't need any but we
+
+still need it in order to create a
+
+function expression then we're gonna
+
+group this whole thing together and say
+
+I want to execute it so there's actually
+
+what four sets of parentheses we just
+
+have to keep them straight in our mind
+
+of what each of them are doing
+
+this last set will do what's called and
+
+this kind of structure is called an
+
+immediately invoked function expression
+
+in other words I will have a function
+
+expression and I want it to be invoked I
+
+invoked immediately when this
+
+application is run and this actually is
+
+a pretty common pattern in JavaScript
+
+development it comes in super handy and
+
+we'll talk about why it comes in handy a
+
+little bit later but we want to just
+
+remember immediately invoked function
+
+expression it's also just known as in
+
+IIF e sometimes I think it's pronounced
+
+if e alright so keep in mind if ease and
+
+will you come back to them a little bit
+
+later
+
+all right so let's move on and move away
+
+from functions just for a little bit
+
+we'll come back to them later but
+
+hopefully you can now tell the
+
+difference between a function
+
+declaration of function expression most
+
+importantly for our purposes you want to
+
+keep in mind what immediately invoked
+
+function expressions are okay all right
+
+so we'll come back to this and let's
+
+move on see in the next video
+
+Thanks
+
+you
+

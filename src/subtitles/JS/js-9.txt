@@ -1,0 +1,398 @@
+throughout this course even from the
+
+very first line of code that we wrote we
+
+use the console dot log function to
+
+print things to our terminal window and
+
+I kept referring to log as a function as
+
+part of the console object in its
+
+simplest form a function is merely a
+
+block of code that we as programmers can
+
+name and once it has a name then we can
+
+call it by its name but it's just one or
+
+more lines of code that we put into a
+
+block and then we say we want to execute
+
+that block over and over and over again
+
+throughout our application so again
+
+that's a very basic explanation of what
+
+a function is but in JavaScript function
+
+functions can do so much more in fact
+
+most of this course will be devoted to
+
+working with functions because frankly
+
+they're one of the primary constructs in
+
+JavaScript for getting things done so
+
+first of all let's go ahead and create a
+
+new file I'm going to call this function
+
+declarations J s all right and first of
+
+all if I have some code that I want to
+
+reuse throughout my application I want
+
+to add it to a function so we can create
+
+a function and I'll walk through and
+
+explain the parts of a function here in
+
+just a moment
+
+let's create the most basic function
+
+that I can possibly think of and I'm
+
+actually gonna copy and paste some code
+
+in so we don't have to type at all but
+
+nothing here should be all that
+
+revolutionary so I've created a new
+
+function called say hello knows my name
+
+I use camel casing right in order to
+
+name my identifier my function name
+
+alright and then I have three lines of
+
+code notice that they're inside of these
+
+curly braces notice that they're
+
+indented so we see kind of a
+
+relationship between this code on the
+
+inside and this line of code and this
+
+line of code on the outside so it kind
+
+of represents a container relationship
+
+this code sits inside of or
+
+part of or is rather the body of the
+
+function that we've just declared all
+
+right so here we just declared a simple
+
+function this is called a function
+
+declaration this style we're gonna look
+
+at other ways to define functions later
+
+and I'll draw your attention and why
+
+you'd want to choose one or the other
+
+later there's at least two other ways
+
+that I'm thinking of off the top of my
+
+head but first of all notice that we use
+
+a key word call function then we give
+
+the function some identifier that we
+
+come up with something meaningful we'll
+
+use similar rules to what we use for
+
+variable names all right then we use an
+
+open and close parentheses you'll see
+
+how these will be used a little bit to
+
+define arguments or paren put parameters
+
+to our function but right now it's empty
+
+we don't require that the call or give
+
+us any additional information and then
+
+we use the open curly brace here and the
+
+close curly brace here to define the
+
+container to define the code that we
+
+want to be the body of this function and
+
+everything inside of that is just any
+
+JavaScript that we want to write for the
+
+most part all right so how do we
+
+actually then use this well we gave this
+
+block of code as defined by the open
+
+closed curly brace we gave it a name and
+
+so we should be able to call it by its
+
+name so I should be able to do something
+
+like this right say hello and that will
+
+give me most of the way there but to
+
+actually invoke a function we have to
+
+use the function invocation operator in
+
+this case is the opening closed
+
+parenthesis and obviously we want to use
+
+our end of line statement here so let's
+
+go node and then function declaration
+
+and let's see no declaration sorry
+
+there we go all right and we get hello
+
+so hopefully you weren't expecting
+
+something super interesting we're just
+
+printing out three lines with what I
+
+would call a flower box kind of around
+
+it's some dashes to style it up a little
+
+bit
+
+we can do some interesting things with
+
+regards to assigning the function to a
+
+variable so let's do let a equal say
+
+hello now do I want to invoke the
+
+function here
+
+no and I'll explain why in a little bit
+
+I merely want to get a reference to the
+
+function and then I'll do a and invoke
+
+the variable so this variable is now
+
+pointing to this function and now I say
+
+okay I have a function inside of this
+
+variable go and VOC it using the
+
+function invocation operators in fact
+
+here let's do it a bunch of times just
+
+to make sure that we're seeing what we
+
+think we should see here and so we can
+
+see hello hello hello all three times in
+
+a row great so let's comment that out
+
+now up to now this function is not all
+
+that interesting let me just copy it and
+
+I'm gonna comment it out and I'll create
+
+a new version of this function down here
+
+beginning in line 17 and I want it to
+
+actually pass allow me to pass in a name
+
+so I could say hello Bob hello Steve
+
+right so we'll just create a new
+
+argument into our function say hello by
+
+giving it a variable name so essentially
+
+now we're able to use this variable name
+
+in the body and we expect the caller to
+
+give us the name it wants us to say
+
+hello to so here I'm just gonna use some
+
+string operators here with name and make
+
+sure these are spaced nicely and so here
+
+I can do whoops
+
+say hello to Bob say hello to Beth say
+
+hello to mr. Tibbals from cat
+
+all right and let's go ahead and run it
+
+and you can see now how I'm able to
+
+reuse that code but change it up by
+
+passing in the name that I want it to
+
+say hello to all right so let's come in
+
+all this out and let's talk about one
+
+more thing that we can do with functions
+
+that has return values from functions so
+
+this first function that we created it's
+
+merely just outputting we're not
+
+expecting it to to perform some
+
+operation and then give us some value
+
+back but what if I wanted to create a
+
+more interesting function that
+
+implements some business rule in my
+
+system in my e-commerce system like to
+
+calculate the sales tax on a given
+
+amount say a subtotal of all the items
+
+that are in my shopping cart I might
+
+create a simple function called
+
+calculate tax like so and we'll get to
+
+the body in just a moment but I want to
+
+allow the caller to pass in the amount
+
+that we're gonna charge tax to all right
+
+then I'm gonna say let result just the
+
+name of a variable result be the amount
+
+that value passed in times 0.08 to 5
+
+which is the sales tax where I live and
+
+then I want to use the keyword return
+
+and then the value I want to return so
+
+you can return one value from a function
+
+in this case I want to return the amount
+
+of tax so I'm gonna return result now
+
+what I'll do is I'm gonna call calculate
+
+tax passing in an amount so let's say
+
+$100 and I want to capture that into a
+
+variable I know it's going to return a
+
+value to me so let's just do let and I
+
+can reuse the variable word result but I
+
+might use something more descriptive
+
+like let tax equal calculate tax and
+
+then console.log the
+
+the tax likes though save that and then
+
+let's run it and you can see that for
+
+$100 purchase it would charge $8.25 in
+
+tax okay but that's what the purpose of
+
+the return keyword is to actually give
+
+me back something so this is an
+
+expression a function invocation
+
+expression it's going to give me a value
+
+back that I can then assign to the new
+
+variable tax and then I can work with
+
+that that value in this case and a
+
+number representing the amount of tax
+
+all right and I think that's all that
+
+I'm going to say about this for now but
+
+there's lots to say about functions it's
+
+gonna again consume the majority of this
+
+course and you're gonna have to become
+
+very familiar with the ins and outs of
+
+working with functions and we'll start
+
+that process in the next video we'll see
+
+there Thanks
+
+you
+

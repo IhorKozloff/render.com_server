@@ -1,0 +1,360 @@
+in the previous video we learned that
+
+values not variables have a data type
+
+and that the data type is essentially a
+
+description of what you want to do with
+
+the data there's more to it than that
+
+but for our purposes right now it's
+
+essentially what we intend to do with
+
+the data and we were learned of four
+
+data types and we'll learn about a
+
+couple more a little bit later there's
+
+the number data type the string the bull
+
+and the undefined so let me ask you this
+
+what happens when we need to use them
+
+together and they don't quite work the
+
+way that we think they should what
+
+options do we have then
+
+so let's go ahead and create new file
+
+I'm gonna call this coercion Co ER cion
+
+dot yes I think that's how you spell it
+
+and let's start off with a quick little
+
+example here so let a equals 7
+
+let b equals the string the literal
+
+string so I want to use single quote six
+
+single quote all right and then let's
+
+see equals a plus B and then console dot
+
+log answer and then C all right before
+
+we execute this application what do you
+
+think is going to be output when we run
+
+it what will the answer be all right get
+
+that in your mind and now let's go node
+
+and coercion and looks like we don't get
+
+anything at all oh I need to say fits ok
+
+there we go let's try that again
+
+there we go we get the answer seven six
+
+wait seven plus six should be 13 right
+
+why are we getting 76 something I can
+
+see what's happening it's not treating
+
+these as two numeric values it's
+
+treating them both as string values so
+
+it's not adding two numbers together
+
+somehow it's coercing that a from a
+
+string in from an integer into a string
+
+and then concatenating together a and B
+
+so this operator the plus operator we
+
+saw how we can use it for addition but
+
+we also it plays double duty and it's
+
+the string concatenation operator but
+
+moreover JavaScript realizes that it
+
+can't add a number in a string those are
+
+it's like adding you know an apple and a
+
+car together it's not like making an
+
+apple and an orange even these it's not
+
+like fruit salad it's like two
+
+disparately different things what do I
+
+do well I will I will take the numeric
+
+value and coerce it convince it force it
+
+against this will to become a string and
+
+then I will concatenate the two together
+
+so that's the notion of coercion and
+
+most people consider that to be an evil
+
+thing or a very dangerous thing and
+
+others just say well it's just what
+
+happens you know it's as part of the
+
+language
+
+now what if I really wanted to perform
+
+addition on two integers well then I
+
+would need to take steps to force the
+
+string 6 to become a number so that I
+
+could then add them together and so to
+
+do that there's actually a special
+
+function that will force that conversion
+
+so let me change this just a little bit
+
+and we already have the value B so I'll
+
+just reuse the value B and I'll set B
+
+equal to parse int now I want you to
+
+notice something I haven't really talked
+
+about visual studio code much but one of
+
+the nice things about visual studio code
+
+is that it popped up this little box
+
+called intellisense and intellisense
+
+is just a visual cue as I'm typing to
+
+show me things that I might need to
+
+reference or things that will help me to
+
+to find the right command or the right
+
+idea in this case I knew it was
+
+something parse
+
+so I start typing in and I can then use
+
+the arrow keys to start looking at like
+
+oh yeah there's poor parsefloat that
+
+would give me a number with decimal
+
+values but this in this case the the
+
+string that I want to use I know that it
+
+will only be a value without without any
+
+decimal point so I want to use the parse
+
+int now what I can do is just use the
+
+space bar or like the opening
+
+parenthesis whatever the next logical
+
+character is to do what's called code
+
+completion so I don't have to type
+
+everything else now in this case I know
+
+that I'm gonna need to use the
+
+parenthesis for reasons I'll talk about
+
+later so I'm just gonna do an open
+
+parenthesis well didn't do it for me
+
+well there we let's just go ahead and
+
+use the tab key instead all right so the
+
+tab key will give me what I want now I'm
+
+inside the the parenthesis that I need
+
+to pass in first of all the string that
+
+I want to change so in this case take
+
+the value of B and then I need to give
+
+it optionally what's called a radix or
+
+radix and that is essentially the base
+
+system so if I wanted to to use like a
+
+hexadecimal I might give six but in this
+
+case I'm gonna give it ten because I
+
+want to eat a base ten or a decimal
+
+conversion all right so it lets a little
+
+technical but typically if we use ten in
+
+there we're going to be just fine so
+
+essentially what I want to do is take
+
+the six and based on the normal decimal
+
+system I want to convert that into a
+
+numeric value and then I want to
+
+continue on in lines four and five like
+
+we had before let's see what we get this
+
+time the answer is 13 just as we had
+
+hoped all right so the parse int is a
+
+built in function to JavaScript and I
+
+can count on it being available in node
+
+or in a web browser or any other
+
+implementation of JavaScript all right
+
+so I guess this begs the question what
+
+if I try to do something kind of evil
+
+with this so let D equal parse int and
+
+then we use the tab key to do the code
+
+completion
+
+and this time I'm going to pass in a
+
+character that will not convert to a
+
+hora or even a string that will not
+
+convert into a numeric value especially
+
+one that's decimal so I'm gonna save
+
+this well let's go ahead and console
+
+that login and D so let's go that this
+
+alright and I get n a n which represents
+
+not a number it's not really an error
+
+it's just telling us that the value we
+
+passed in is not a number we could
+
+actually do something along these lines
+
+as well let e equals is an a N and then
+
+I can give it some numeric value in this
+
+case I'll give it D and I'll become sold
+
+log E save that run it again and so this
+
+time now I'm evaluating whether D is not
+
+a number and that is true it is not a
+
+number because I can see it here that's
+
+printed out all right so we saw two
+
+built-in functions but there's a bunch
+
+of built-in functions for various things
+
+all kind of centered around in this case
+
+just working with coercion and checking
+
+the results of that attempt to to coerce
+
+or or convert one data type into another
+
+alright
+
+unfortunately there's no parse boolean
+
+so you can't take a string of true or
+
+false and converted into a boolean
+
+you'll have to take a few extra steps
+
+there's a bunch of examples online for
+
+that and so depending on the type of
+
+conversion that you're attempting to to
+
+perform it may not be easy to convert
+
+from one to the other there's always a
+
+way and usually you can find some code
+
+online especially on a site like Stack
+
+Overflow that will help you figure that
+
+out but that's all I wanted to say let's
+
+continue on in the next video we'll see
+
+you there Thanks
+
+you
+

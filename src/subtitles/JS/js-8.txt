@@ -1,0 +1,440 @@
+up till now each variable that we create
+
+can store one value at a time per
+
+variable but what if we need to work
+
+with lists of data in other words I need
+
+to keep track of several people or
+
+several numbers and I need to store them
+
+in such a way that it doesn't matter if
+
+I have two or ten or a hundred I can
+
+kind of keep them together and move them
+
+all around and use them in my
+
+application as a list as a grouping of
+
+related values in that case I want to
+
+create an array and so let's start by
+
+creating a new file called arrays jas
+
+and first of all it's basically an array
+
+is basically a variable that can hold
+
+many different values and so we can
+
+declare variable and initialize its
+
+value like so so here we'll do let a
+
+equals and here we're going to use an
+
+opening and closing square brace or
+
+bracket and then I'm going to give it a
+
+series of values each value will be
+
+separated by a comma for eight let's say
+
+15 16 23 and 42 all right and so now I
+
+have an array of those values now these
+
+are just numeric values what if I wanted
+
+to create an array of string values I
+
+knew something similar in fact I can use
+
+any data type inside of here that's
+
+allowable in JavaScript and we'll see
+
+some examples of that a little bit later
+
+but I might want David Eddy Alex and
+
+Michael okay and then what if I want to
+
+get one of the values that you just do
+
+console dot log all right inside of here
+
+I'm gonna use the variable name so in
+
+this case I'll use a and then I want to
+
+provide a index to retrieve one of the
+
+elements so each of these is an element
+
+of the array and I want to use an index
+
+a numeric value that that allows me to
+
+get at one of those elements inside of
+
+the array the indexes are zero-based
+
+that trips up beginners sometimes you
+
+for example to get at the number for the
+
+first element in the array I would use
+
+the index 0 if I want the second item in
+
+the array the second element of the
+
+array I would need to use the index 1
+
+and so on so to get at it I'm going to
+
+use a and then right next to the a
+
+square brackets and now I'm gonna give
+
+it an index so here we'll grab the first
+
+value and then I'll grab the second
+
+value and then I want to do show you how
+
+console dot log will just print out all
+
+of the values for you nicely if you just
+
+want to give it the name of the of the
+
+array itself the the variable itself so
+
+let's save our work and we'll go node
+
+arrays all right so you can see the
+
+first element of the array at index 0
+
+gives us the value for the second
+
+element of the array at index 1 gives us
+
+the value 8 all right hope you can see
+
+the correlation there or if I just want
+
+to print out all the values in the array
+
+I can just provide the variable name
+
+that contains the array and it will
+
+print them out for me just like I have
+
+and up here when I actually initialized
+
+our array variable alright let's come in
+
+this out now that is how we access
+
+individual elements what if I wanted to
+
+change or set the value of one of the
+
+elements the same would work so in this
+
+case I would say for example a 0 and I
+
+would set it equal to 7 like so and so
+
+then we can just use console.log like so
+
+and then we run our application now you
+
+see the first element the array has been
+
+changed from 4 to 7 because that's how
+
+we can access a single element and
+
+assign it a new value
+
+all right so what about these mysterious
+
+these mysterious arrays what is their
+
+data type so let's do console.log type
+
+of a and we can see that it's of type
+
+object and we'll talk about the object
+
+datatype later because there's a lot
+
+more to it than just being able to
+
+create a raise
+
+but it's a little bit more advanced at
+
+this point we'll get into it soon just
+
+keep in mind that an array isn't a data
+
+type of itself it is a type of something
+
+called object and we'll talk about
+
+objects later all right
+
+so the other thing that's important to
+
+remember is that a array can and can
+
+include elements of different data types
+
+so let me just do let's see equals we
+
+started with four and then we'll do Alex
+
+and then we'll be true all right so
+
+we've used three different data types
+
+right there and we can just do note rays
+
+oh I need to actually do a console log
+
+see there we go there we go all right so
+
+you can see that a single array can hold
+
+different data types there's no
+
+restriction there let's come at that out
+
+what happens if I try to access an
+
+element that within with a index that
+
+does not exist so let's do console log
+
+and I happen to know that the B has four
+
+different elements in it for names and
+
+let me try to access the fifth element
+
+by using the index four
+
+and this will be undefined so just like
+
+a variable without any value assigned to
+
+it is undefined so is a element of an
+
+array undefined if we don't give it a
+
+value now I can also just
+
+programmatically determine the number of
+
+elements in an array by using a special
+
+property called length so I can do
+
+console.log a dot and remember the dot
+
+is the member access operator so arrays
+
+are objects and this particular object
+
+has a special property called length
+
+which will give me the number of
+
+elements in that array so I would expect
+
+to see let's see one two three four five
+
+six so the question is is there going to
+
+give us six the actual number or is it
+
+going to give it us to it in a
+
+zero-based fashion and the answer to
+
+that is that it will give us the actual
+
+number not zero based and this will come
+
+into into play a little bit later when
+
+we use the length of an array and we
+
+iterate through each element of the
+
+array to print them to screen when we
+
+learn about looping alright so just keep
+
+that in the back of your mind now
+
+there's a lot of strange things that you
+
+can do with with arrays and some of them
+
+are not always intuitive like for
+
+example if I wanted to just randomly
+
+create a new element so in this case I'm
+
+going to create what the use the index
+
+10 which means this would add an 11th
+
+element to the array what happens with
+
+all of the elements between where we
+
+left off 0 1 2 3 4 5 so 6 through 11
+
+what will we get so let's just assign
+
+this to 77 and then I want to do a
+
+consult
+
+log of a and then I want to do
+
+console.log and a dot length like we
+
+just learned about and kind of see
+
+what happens here and then let's run
+
+that all right so we can see that it
+
+prints out four five six seven or I'm
+
+sorry 4 8 15 16 23 42 and then it says
+
+there's four empty items and then
+
+there's 77 and it says that there's 11
+
+there's eleven items 11 elements in this
+
+array because we filled up the tenth
+
+index or index 10 with a value so it
+
+will create essentially what's called a
+
+sparse array and that means that there
+
+are empty elements inside now this isn't
+
+usually the way that you want to work
+
+with arrays if you need to add new
+
+values because it's not as safe we're
+
+inadvertently creating elements with
+
+nothing in them there's a safer way to
+
+go about this using some additional
+
+built-in functions of the array and so
+
+if I wanted to add that value and add it
+
+to the end of the array no matter how
+
+many elements are currently in the array
+
+I could use the push method and so I say
+
+hey I want to push the number 77 to the
+
+end of the existing array so let's sum
+
+let's copy this and paste it here and
+
+then if I wanted to remove it I can use
+
+a method called pop so this function pop
+
+will remove the last element of the
+
+array in fact I can call it several
+
+times to keep removing elements of the
+
+array and here we'll just print out what
+
+the end result is just like we did
+
+previously so now this should put some
+
+fireworks into our terminal window so
+
+you can see that using push in line
+
+number 29 I was able to add the number
+
+77 to the end of the existing array and
+
+that gives me seven total elements now I
+
+call pop three times it removes 77 42
+
+and 23 leaving us with just four
+
+elements in our array okay so we're
+
+going to continue to use arrays they're
+
+a great way to to keep lists of things
+
+together and accessible and will become
+
+even more important again as we learn
+
+how to loop through arrays and to
+
+evaluate each element
+
+we can even use a raise to hold on to
+
+other things like like objects and
+
+functions and learn about some advanced
+
+to use cases with arrays a little bit
+
+later all right so that's all I have to
+
+say about arrays let's move on and start
+
+looking into some things that are beyond
+
+the absolute basics we'll start moving
+
+and talking about functions all right
+
+see there Thanks
+
