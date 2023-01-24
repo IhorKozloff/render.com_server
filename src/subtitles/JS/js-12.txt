@@ -1,0 +1,534 @@
+in this video we'll talk about iteration
+
+statements iterations allow us to loop
+
+through a body of code a block of code a
+
+number of times until a certain
+
+condition is met and there's a couple of
+
+different types of iteration statements
+
+we'll look at two in this lesson and
+
+we'll even look at them in relationship
+
+to arrays something I promised several
+
+lessons ago so let's start off by
+
+creating a new file and call it
+
+iterations j/s and inside of here we'll
+
+create our first for loop so for and
+
+then there are three parts inside of the
+
+opening and closing parenthesis first of
+
+all we'll let I equals 0 or we can
+
+actually just shorthand this and not
+
+even use the key word let and here I
+
+less than 10 I plus plus and so this is
+
+gonna take some explanation but let's
+
+just get this working first and then
+
+I'll come back and I'll talk about it
+
+and we'll just print out the value of I
+
+alright what do you think is gonna
+
+happen here if I didn't tell you
+
+anything about how the for loop actually
+
+works what do you think will be printed
+
+to screen when we execute our script
+
+let's find out so let's go here and type
+
+in you know the iterations alright so we
+
+get a several it looks like 10 different
+
+values printed to screen each on a
+
+separate line 0 through 9 and then our
+
+application exits all right so let's
+
+talk about this it's a shorthand syntax
+
+and there's three parts as separated by
+
+these two semicolons inside of this this
+
+evaluation header for the for first of
+
+all we declare variable in this case
+
+I've declared I that's why we use the
+
+Lett but then I said oh you don't really
+
+don't need it let's keep it short so
+
+we're declaring it and then we're going
+
+to initialize its value to 0 the second
+
+step we're gonna say continue running
+
+this for loop as long as this condition
+
+is true so as long as I is less than
+
+and continue running the body of this
+
+four loop as defined with this set of
+
+curly braces here and then finally after
+
+you've run an iteration increment the
+
+value by by one all right and here we're
+
+going to then print out the value and
+
+that's why we start at the value of zero
+
+and then we work our way all the way
+
+through this ten times on the tenth time
+
+I gets incremented to ten this this
+
+check is performed it's false and then
+
+we exit out of the program all right now
+
+let's do something a little bit more
+
+interesting like I suggested before let
+
+me comment this out here let's go let a
+
+equal to and this should look familiar 4
+
+8 15 16 23 and 42 look I guess I forgot
+
+the equal sign there and now what we'll
+
+do is for I equals 0 I is less than a
+
+dot length I plus plus inside the body
+
+this will do console.log a and what
+
+element well we use I because I will
+
+start off with the value of zero and it
+
+will continue until we get to the length
+
+property which is not zero based and
+
+once we get to for example the 0 1 2 3 4
+
+5 so length will be 6 elements so once
+
+is 6 it's no longer true that I is less
+
+than the length of this array and will
+
+exit out so let's go and save this and
+
+then run and we can see we get all of
+
+our values printed out to screen so
+
+that's the proper way to iterate through
+
+or one way I should say to iterate
+
+through an array now one thing about
+
+visual studio code that I really love is
+
+that they have this notion of code
+
+snippets so if you ever forget this this
+
+syntax and it can be a little daunting
+
+at first
+
+there's a way to remember it perfectly
+
+every time and that is to let the code
+
+snippets build it for you so I type in
+
+the for keyword intellisense pops up a
+
+little window under it and I'll use the
+
+arrow keys to go to the for loop
+
+JavaScript alright there's a couple of
+
+fors
+
+but the one that we want has this little
+
+box with dots underneath of it that
+
+tells me that this is a code snippet I
+
+hit enter on my keyboard and now I get
+
+the basic structure of my of my for loop
+
+already created for the purpose of an
+
+array now notice that every word index
+
+is highlighted and I can change that
+
+every instance of that by just using a
+
+letter like I'm gonna change this to the
+
+letter B instead of index and notice
+
+that it changed it everywhere and then
+
+I'm gonna hit the enter key on my
+
+keyboard which is the wrong move then
+
+I'm gonna hit the tab key on my keyboard
+
+and I can change the name of the array
+
+now everywhere the word array is used I
+
+can swap that out with the letter A for
+
+example I'll use the tab key one more
+
+time here it puts me to the another
+
+replaceable area for the element and
+
+here all you see I'll use to have one
+
+more time and then it kind of exits me
+
+out of that snippet replacement
+
+structure and now I can continue on a
+
+type like console.log that'll just print
+
+out C okay so let's grab a from our
+
+previous example and then we get the
+
+same results we got before but this time
+
+we didn't have to memorize exactly how
+
+to use for the code snippet walked us
+
+through and allowed us to replace the
+
+names of the various replaceable areas
+
+like the name of the counter the name of
+
+the array and the name of the given
+
+element C that we extract out of out of
+
+our of our
+
+arrey okay just come at that out that's
+
+four and now let's take a look at the
+
+while loop so we'll talk about the
+
+difference between these it may not be
+
+obvious at first but essentially we'll
+
+do this alright so take a look at this
+
+knowing what you know about loops what
+
+do you think is going to happen here
+
+well we start off with one and we're
+
+going to continue to execute this loop
+
+until this condition is false so the
+
+very first time we run it one is indeed
+
+less than ten so we'll continue to run
+
+the body the block that's associated
+
+with our while statement and we'll print
+
+out the value of x and then increment
+
+its value by one we'll continue to do
+
+this until we increment the value of x
+
+and it becomes ten
+
+at which point this is no longer true
+
+becomes false and then we'll break out
+
+and continue on so let's go ahead and
+
+see what value what what the value is
+
+that we get so we get one through nine
+
+that's expected and once we hit ten we
+
+break out great alright so what's the
+
+difference between the while statement
+
+and this first for loop that we did here
+
+at the very top well the difference is
+
+that the for loop first of all has a lot
+
+of infrastructure that we have to build
+
+these three pieces and it uses a series
+
+of indexes that represent the number of
+
+iterations that will move through this
+
+block of code now the while statement a
+
+little bit different anything can be
+
+used to derive the iterations as long as
+
+this statement continues to be true will
+
+continue to execute this block of code
+
+and so we control the number of
+
+iterations in the body in this case here
+
+I do the X plus plus now we don't have
+
+to use counters we could use anything
+
+any kind of business logic like we may
+
+want to read to the end of a file and
+
+once we hit the end of the file it no
+
+longer it makes sense to continue to
+
+read each line of the file
+
+we would want to break out so the while
+
+is a little bit more flexible and so
+
+much that we can build a business logic
+
+for how many times we're going to
+
+iterate in the body of the the while
+
+statement whereas with the four we're
+
+pretty much limited to the number of
+
+times we want to run this being the
+
+number of times that we've kind of
+
+preset it up here in this top section
+
+outside of the body itself okay now
+
+there's also one less thing we can talk
+
+about and that's a way in both the four
+
+and the while we can kind of circumvent
+
+this check right here and we may want to
+
+do a check like this so if X is equal to
+
+seven then we'll call the break
+
+statement
+
+all right so learning what we've learned
+
+about the if statement it probably
+
+should look more like that all right so
+
+let's first of all let's make sure it
+
+works in this case we've got one two
+
+three four five six once we reach the
+
+seven we circumvent this check and just
+
+say hey I want to break out of this all
+
+right so we can use that always to break
+
+out just like we broke out of the switch
+
+when we want it to not let it flow
+
+through additional cases now the one
+
+thing I will say if you notice how I
+
+type this to begin with let's retype
+
+that so hold on let me comment this out
+
+so that you can see it in the code if
+
+you want to download my code but we
+
+could also do it a little bit more
+
+shorter and inline since I only have one
+
+statement that I want to make right
+
+after the if statement I can do it on
+
+the same line and I don't need to
+
+surround it with a code block a code
+
+block indicates that there's usually
+
+more than one line of code in this case
+
+there's just one line of code I could
+
+put it on the separate line and use some
+
+indentation like that or I can just keep
+
+it all on the same line since it's so
+
+short but that might improve readability
+
+or I might decide that this is a more
+
+readable form that's kind of up to me
+
+and if I'm working on it with a team of
+
+software developers I might want to get
+
+and kind of do it the way that they do
+
+it but stylistic for me this is so short
+
+I can read it all in one shot
+
+if X is seven then break out of it it
+
+just it looks good it's very readable
+
+I'll be able to understand what I'm
+
+doing later on it doesn't take up and
+
+move the code down so I like that that
+
+format if I just need to create one
+
+statement right after my if right after
+
+my if so sometimes it makes sense to
+
+split things on separate lines sometimes
+
+it makes sense to keep two different
+
+statements on the same line again I
+
+think it kind of is a stylistic choice
+
+that you'll you have to make for
+
+yourself at some point alright so that
+
+is iteration statements we've looked at
+
+two different kinds and we looked at how
+
+code snippets can be used to help us
+
+remember the format now I believe the
+
+while has in fact I believe most of the
+
+things that we've looked at has some
+
+some code snippets available to them
+
+like if I find it here and intellisense
+
+they hit enter on the keyboard but
+
+there's not as much to it there I mean
+
+while with the condition I can change
+
+this to X is less than 10 right it's not
+
+so much for me to type that out but the
+
+4 makes a little bit more sense because
+
+there's so many parts to it and
+
+replaceable parts of that okay so let's
+
+continue on in the next video we'll see
+
+there Thanks
+

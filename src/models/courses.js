@@ -114,15 +114,15 @@ const courseSchema = Schema({
                         {
                             file_name: {
                                 type: String,
-                                required: true
+                                required: false
                             },
                             file_path: {
                                 type: String,
-                                required: true
+                                required: false
                             },
                             file_size: {
                                 type: String,
-                                required: true
+                                required: false
                             },
                         }
                     ]

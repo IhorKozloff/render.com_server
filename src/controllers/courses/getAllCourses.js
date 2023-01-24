@@ -14,7 +14,6 @@ const getAllCourses = async (req, res, next) => {
             popularity_tags: item.popularity_tags,
             categories: item.categories,
             total_lessons: item.coures_general_info.total_lessons,
-            total_time_minutes: item.coures_general_info.total_time_minutes
         }
     })
     res.json({
