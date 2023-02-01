@@ -14,8 +14,19 @@ const courseSchema = Schema({
         required: true
     },
     poster_path: {
-        type: String,
-        required: true
+        ratio_normal: {
+            type: String,
+            required: true
+        },
+        ratio_double: {
+            type: String,
+            required: false
+        },
+        ratio_tripple: {
+            type: String,
+            required: false
+        },
+        
     },
     author: {
         type: String,
@@ -110,22 +121,29 @@ const courseSchema = Schema({
                         type: String,
                         required: true
                     },
-                    lesson_attachment: [
-                        {
-                            file_name: {
-                                type: String,
-                                required: false
-                            },
-                            file_path: {
-                                type: String,
-                                required: false
-                            },
-                            file_size: {
-                                type: String,
-                                required: false
-                            },
+                    lesson_attachment: {
+                        files: [
+                            {
+                                file_name: {
+                                    type: String,
+                                    required: false
+                                },
+                                file_path: {
+                                    type: String,
+                                    required: false
+                                },
+                                file_size: {
+                                    type: String,
+                                    required: false
+                                },
+                            }
+                        ],
+                        multiply_files_path: {
+                            type: String,
+                            required:true
                         }
-                    ]
+                        
+                    }
                 }
             ]
         }
