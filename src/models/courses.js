@@ -50,7 +50,7 @@ const courseSchema = Schema({
             required: true
         }
     },
-    coures_general_info: {
+    course_general_info: {
         total_sections: {
             type: Number,
             required: true

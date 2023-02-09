@@ -5,6 +5,7 @@ const getAllCourses = async (req, res, next) => {
     const courses = await Course.find();
 
     const result = courses.map(item => {
+
         return {
             id: item._id,
             title: item.title,
