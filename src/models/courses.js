@@ -110,7 +110,7 @@ const courseSchema = Schema({
                         required: true
                     },  
                     lesson_transcription: {
-                        type: String,
+                        type: Array,
                         required: true
                     },
                     lesson_subtitle_file_path: {
