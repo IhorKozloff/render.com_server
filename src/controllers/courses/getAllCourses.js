@@ -13,7 +13,7 @@ const getAllCourses = async (req, res, next) => {
             author: item.author,
             popularity_tags: item.popularity_tags,
             categories: item.categories,
-            total_lessons: item.coures_general_info.total_lessons,
+            total_lessons: item.course_general_info.total_lessons,
         }
     })
     res.json({
