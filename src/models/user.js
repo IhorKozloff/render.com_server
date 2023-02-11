@@ -4,6 +4,32 @@ const Joi = require("joi");
 
 const emailRegexp = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 
+const LessonProgresItemSchema = Schema(
+    {
+        lessonId: {
+            type: String,
+            default: ''
+        },
+        progressTime: {
+            type: Number,
+            default: 0
+        },
+        isWatched: {
+            type: Boolean,
+            default: false
+        },
+        isOnPause: {
+            type: Boolean,
+            default: false
+        },
+        isOnPlay: {
+            type: Boolean,
+            default: false
+        }
+    }
+);
+
+
 const userSchema = Schema({
     name: {
         type: String,
@@ -22,10 +48,14 @@ const userSchema = Schema({
     },
     token: {
         type: String,
-        default: ""
+        default: ''
     },
-    liked_courses: {
-        type: Array,
+    liked_courses_ids: {
+        type: [String],
+        default: []
+    },
+    lessonsProgress: {
+        type: [LessonProgresItemSchema],
         default: []
     }
 }, {versionKey: false, timestamps: true});

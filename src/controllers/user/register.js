@@ -11,7 +11,7 @@ const register = async (req, res) => {
         throw createError(409, "Email in use");
     }
     const hashPassword = await bcrypt.hash(password, 10);
-    const liked_courses = [];
+
     const result = await User.create({...req.body, password: hashPassword});
     
     res.status(201).json({
