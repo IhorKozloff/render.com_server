@@ -7,5 +7,6 @@ const { validateBody, isUserAuthorized } = require("../middlewares");
 
 coursesRouter.get('/all', ctrlWrapper(ctrl.getAllCourses));
 coursesRouter.get('/:courseId', ctrlWrapper(ctrl.getCourseById));
+coursesRouter.post('/:courseId/like', ctrlWrapper(ctrl.likeCourse));
 
 module.exports = coursesRouter;

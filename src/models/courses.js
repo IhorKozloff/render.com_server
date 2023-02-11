@@ -13,6 +13,10 @@ const courseSchema = Schema({
         type: Number,
         required: true
     },
+    users_likes_emails: {
+        type: [String],
+        default: []
+    },
     poster_path: {
         ratio_normal: {
             type: String,
