@@ -4,14 +4,12 @@ const likeCourse = async (req, res, next) => {
 
     const { courseId } = req.params;
     const { email } = req.body;
-    console.log(email)
+
     const result = await Course.findById(courseId);
-   
-    console.log(result.users_likes_emails)
 
-        const currentUserHasLiked = result.users_likes_emails.find(item => item === email);
+    const currentUserHasLiked = result.users_likes_emails.find(item => item === email);
 
-        let message = '';
+    let message = '';
 
         if (currentUserHasLiked) {
             const newLikedArr = result.users_likes_emails.filter(item => item !== email);
