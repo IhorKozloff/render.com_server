@@ -1,5 +1,16 @@
 const { Schema, model} = require("mongoose");
 
+const certificateSchema = Schema({
+    certificate_title: {
+        type: String,
+        required: true
+    },
+    certificate_description: {
+        type: String,
+        required: true
+    }
+})
+
 const courseSchema = Schema({
     title: {
         type: String,
@@ -74,6 +85,10 @@ const courseSchema = Schema({
         course_overview_description: {
             type: String,
             required: true
+        },
+        certificate: {
+            type: [certificateSchema],
+            default: []
         }
     },
     course_content: [
