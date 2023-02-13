@@ -17,7 +17,9 @@ userRouter.post('/login',
     ctrlWrapper(ctrl.login)
 );
 
-userRouter.get('/logout', isUserAuthorized, ctrlWrapper(ctrl.logout))
+userRouter.put('/save', ctrlWrapper(ctrl.save)
+);
+userRouter.post('/logout', ctrlWrapper(ctrl.logout))
 
 
 module.exports = userRouter;

@@ -1,9 +1,13 @@
 const { User } = require("../../models/user");
 
 const logout = async (req, res) => {
-    const {_id} = req.user;
-    await User.findByIdAndUpdate(_id, {token: ""});
-    res.status(204).json();
+    const { email } = req.body;
+    await User.findOneAndUpdate(email, {token: ""});
+
+    res.json({
+        status: 204,
+        message: "user logged out"
+    })
 }
 
 module.exports = logout;
