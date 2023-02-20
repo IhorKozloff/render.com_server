@@ -14,7 +14,7 @@ const login = async (req, res) => {
         throw createError(401, "Email not found")
     }
 
-    if(!bcrypt.compare(password, user.password)) {
+    if(password !== user.password) {
         throw createError(401, "Wrong password")
     }
 
